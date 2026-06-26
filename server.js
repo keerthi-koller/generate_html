@@ -513,7 +513,7 @@ app.post('/api/report', (req, res) => {
 
     try {
         const html = buildReportHtml(json, meta);
-        // res.setHeader('Content-Type', 'text/html; charset=utf-8');s
+        res.setHeader('Content-Type', 'text/plain; charset=utf-8'); s
         res.send(html);
     } catch (err) {
         console.error('Report build error:', err);
